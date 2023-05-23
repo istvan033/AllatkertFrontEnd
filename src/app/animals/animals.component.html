@@ -1,0 +1,36 @@
+<div class="row my-3 text-center font-weight-bold">
+    <div *ngFor="let o of oszlopok" class="col">
+        {{o}}
+    </div>
+    <div class="col">
+        Actions
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let o of oszlopok" class="col">       
+        <input type="text" [(ngModel)]="ujAllat[o]" class="form-control">
+    </div>
+    <div class="col">     
+        <button type="button" class="btn btn-warning">Add</button>
+    </div>
+</div>
+
+
+<div  *ngFor="let allat of allatok" class="row my-2">
+  
+    <div *ngFor="let o of oszlopok" class="col">
+        <!-- {{allat[o]}} -->
+        <input type="text" [(ngModel)]="allat[o]" class="form-control">
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-warning">Edit</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
