@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230601 09:12:22.972" rpa="false" schemaversion="3">
+<suite id="s1" name="Tasks" source="/Users/pasztoristvan/programozas/Allatkert/AllatkertFrontEnd/test/tasks.robot">
+<test id="s1-t1" name="Open Website" line="8">
+<kw name="Open Site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230601 09:12:23.236" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:4200/'.</msg>
+<msg timestamp="20230601 09:12:23.241" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230601 09:12:23.235" endtime="20230601 09:12:30.337"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230601 09:12:30.338" endtime="20230601 09:12:30.804"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>home.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230601 09:12:31.094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="home.png"&gt;&lt;img src="home.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230601 09:12:30.804" endtime="20230601 09:12:31.095"/>
+</kw>
+<status status="PASS" starttime="20230601 09:12:23.235" endtime="20230601 09:12:31.095"/>
+</kw>
+<kw name="Click Animals">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="navbarSupportedContent"]/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230601 09:12:31.096" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230601 09:12:31.096" endtime="20230601 09:12:33.006"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="navbarSupportedContent"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230601 09:12:33.006" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230601 09:12:33.006" endtime="20230601 09:12:35.429"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="navbarSupportedContent"]/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230601 09:12:35.430" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20230601 09:12:35.430" endtime="20230601 09:12:35.695"/>
+</kw>
+<status status="PASS" starttime="20230601 09:12:31.095" endtime="20230601 09:12:35.695"/>
+</kw>
+<kw name="CloseWebsite">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230601 09:12:35.696" endtime="20230601 09:12:35.764"/>
+</kw>
+<status status="PASS" starttime="20230601 09:12:35.696" endtime="20230601 09:12:35.764"/>
+</kw>
+<status status="PASS" starttime="20230601 09:12:23.234" endtime="20230601 09:12:35.764"/>
+</test>
+<status status="PASS" starttime="20230601 09:12:22.977" endtime="20230601 09:12:35.765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

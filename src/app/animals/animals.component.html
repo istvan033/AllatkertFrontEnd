@@ -8,17 +8,17 @@
 </div>
 
 <div class="row">
-    <div *ngFor="let o of oszlopok" class="col">       
+    <div *ngFor="let o of oszlopok" class="col">
         <input type="text" [(ngModel)]="ujAllat[o]" class="form-control">
     </div>
-    <div class="col">     
-        <button type="button" class="btn btn-warning">Add</button>
+    <div class="col">
+        <button type="Createbutton" class="btn btn-warning">Add</button>
     </div>
 </div>
 
 
 <div  *ngFor="let allat of allatok" class="row my-2">
-  
+
     <div *ngFor="let o of oszlopok" class="col">
         <!-- {{allat[o]}} -->
         <input type="text" [(ngModel)]="allat[o]" class="form-control">

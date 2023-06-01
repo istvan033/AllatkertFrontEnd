@@ -7,20 +7,30 @@ import { BaseService } from '../base.service';
   styleUrls: ['./animals.component.css']
 })
 export class AnimalsComponent {
-  
+
   allatok:any;
-  oszlopok=["id","nev","faj","gondozo"];
+  oszlopok=["id","nev","faj","gondozo","helye"];
   ujAllat:any={};
 
+  refresh(){
+    this.base.get().subscribe({
+      next:
+      (adatok) => {
+        this.allatok=adatok;
+        console.log(this.allatok);
+      },
+      error:(e)=>console.log(e)
+    }
+    );
+  }
+
   constructor(private base:BaseService){
-      this.base.get().subscribe({
-        next:
-        (adatok) => {
-          this.allatok=adatok;
-          console.log(this.allatok);
-        },
-        error:(e)=>console.log(e)
-      }
-      );
+    this.refresh();
+  }
+
+  addAnimal(){
+    this.base.add(this.ujAllat).subscribe(
+      (e)=> {this.refresh();this.ujAllat={}}
+    )
   }
 }
